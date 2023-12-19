@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookmark</title>
+    <script src="https://kit.fontawesome.com/a26a80eee9.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <section class="py-5">
+        <div class="container">
+            <div class="header-title text-center pb-2">
+                <h1 class=" mb-5"><span>Bookmarker</span></h1>
+            </div>
+            <hr class="mb-4">
+            <div class="snd-header-title mb-4 text-center">
+                <h3 class=""><i class="fa-solid fa-bookmark"></i> Bookmark your favorite sites <i class="fa-solid fa-bookmark"></i>
+                </h3>
+            </div>
+            <div class="book-form">
+                <form action="" class=" d-flex flex-column">
+                    <div class="site-name mb-4 px-3">
+                        <label for="sName" class="mb-2"><i class="fa-solid fa-book-bookmark pe-2"></i> Site Name</label>
+                        <div class="input-icon">
+                        <input type="text" class="form-control" id="sName" oninput="validation()" placeholder="Bookmark Name">
+                            <i id="redName" class="fa-solid fa-circle-exclamation text-danger d-none"></i>
+                            <i id="greenName" class="green1 fa-solid fa-check text-success d-none"></i>
+                        </div>
+                    </div>
+                    <div class="site-url mb-4 px-3">
+                        <label for="sURL" class="mb-2"><i class="fa-solid fa-link pe-2"></i> Site URL</label>
+                        <div class="input-icon">
+                        <input class="form-control" type="text" id="sURL"  oninput="validation()" placeholder="Website URL">
+                            <i id="redUrl" class="fa-solid fa-circle-exclamation text-danger d-none"></i>
+                            <i id="greenUrl" class="green1 fa-solid fa-check text-success d-none"></i>
+                        </div>
+                    </div>
+                    <button id="frm-sub-btn" class="m-auto px-5 py-2 mb-2 text-white border-0 rounded-2 bg-danger">Submit</button>
+                </form>
+                <hr>
+                <table class="table mt-4">
+                    <thead class="text-center">
+                        <th>Index</th>
+                        <th>Website Name</th>
+                        <th>Visit</th>
+                        <th>Delete</th>
+                    </thead>
+                    <tbody id="book-tbody" class="text-center">
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div id="msg" class="msg-container d-flex position-fixed top-0 start-0 w-100 min-vh-100 justify-content-around align-items-center">
+            <div id="alertMsg" class="bg-white p-4 rounded-3">
+                <div class="alert-icons d-flex justify-content-between mb-4 mt-2">
+                    <div class="alert-left d-flex">
+                        <div class="alert-red"></div>
+                        <div class="alert-yellow"></div>
+                        <div class="alert-green"></div>
+                    </div>
+                    <div class="alert-right">
+                        <button class="border-0 bg-white p-1" onclick="closeMsg()"><i class="fa-solid fa-xmark fs-3"></i></button>
+                    </div>
+                </div>
+                <div class="alert-content">
+                    <h5 class="py-3">Site Name or Url is not valid, Please follow the rules below :</h5>
+                    <p class="mb-1"><i class="p-2 fa-regular fa-circle-right text-danger"></i> Site name must contain at least 3 characters</p>
+                    <p class="mb-1"><i class="p-2 fa-regular fa-circle-right text-danger"></i> Site URL must be a valid one</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
