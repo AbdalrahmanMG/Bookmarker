@@ -25,7 +25,7 @@ function addRecord(e) {
     msg.classList.replace("d-none", "d-flex");
   }
   showInTable();
-  // resetForm()
+  resetForm()
 }
 
 function showInTable() {
@@ -103,7 +103,6 @@ function validation() {
 function closeMsg() {
   msg.classList.replace("d-flex","d-none");
 }
-
 
 msg.addEventListener("click", function(e){
   var alertMsg = document.getElementById('alertMsg');
