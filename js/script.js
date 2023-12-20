@@ -56,7 +56,7 @@ function deleteRow(index) {
 
 function validation() {
   var nameRegex = /^(([a-z]{3,})\s?)+$/gi;
-  var urlRegex = /^((www\.)[a-z]{2,}|[a-z]{2,})\.(com)$/gi;
+  var urlRegex = /^(https:\/\/)((www\.)[a-z]{2,}|[a-z]{2,})\.(com)/gi;
   var redName = document.getElementById("redName");
   var greenName = document.getElementById("greenName");
   var redUrl = document.getElementById("redUrl");
